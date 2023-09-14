@@ -18,8 +18,8 @@ use App\Http\Controllers\PeopleController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/Gajdzik/50913/people', [PeopleController::class, 'index']);
-Route::post('Gajdzik/50913/people', [PeopleController::class, 'store']);
-Route::get('/Gajdzik/50913/people/{id}/edit', [PeopleController::class, 'show']);
-Route::put('/Gajdzik/50913/people/{id}/edit', [PeopleController::class, 'update']);
-Route::delete('/Gajdzik/50913/people/{id}', [PeopleController::class, 'delete']);
+Route::get('people', [PeopleController::class, 'index']);
+Route::post('people', [PeopleController::class, 'store']);
+Route::get('people/{id}', [PeopleController::class, 'show']);
+Route::put('people/{id}', [PeopleController::class, 'update']);
+Route::delete('people/{id}', [PeopleController::class, 'delete']);
